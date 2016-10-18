@@ -1,1 +1,1 @@
-This repo contains the materials for the Statistics Course
+This repo contains the materials for the Statistics Course.
