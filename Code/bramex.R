@@ -1,7 +1,7 @@
 ## bramex data set ##
 
 # Setting working directory (customize)
-setwd("/Users/miguel/Dropbox/Current jobs/STAT-2016")
+setwd("C:/Users/mcanela/Dropbox (Personal)/STAT-2017")
 
 # Importing data #
 bramex <- read.csv("Data/bramex.csv")
@@ -19,13 +19,13 @@ summary(reg.model)$r.squared
 cor(bramex$bra, bramex$mex)
 cor(bramex[, -1])
 
-# Figure 1.1 (customize) #
-pdf("Figures/fig 1.1.pdf",width=3.25,height=3.5,pointsize=7)
+# Figure 2.1 (customize) #
+pdf("Figures/fig 1.1.pdf", width=3.25, height=3.5, pointsize=7)
 plot(bramex$bra, bramex$mex, main="", xlab="Brazil", ylab="Mexico", pch=20)
 dev.off()
 
-# Figure 1.2 (customize) #
-pdf("Figures/fig 1.2.pdf",width=3.25,height=3.5,pointsize=7)
+# Figure 2.2 (customize) #
+pdf("Figures/fig 1.2.pdf", width=3.25, height=3.5, pointsize=7)
 plot(bramex$bra, bramex$mex, main="", xlab="Brazil", ylab="Mexico", pch=20)
-abline(model)
+abline(reg.model)
 dev.off()
