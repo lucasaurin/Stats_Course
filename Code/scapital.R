@@ -1,9 +1,9 @@
 ## scapital data set ##
 
+# Setting working directory (customize)
+setwd("C:/Users/mcanela/Dropbox (Personal)/STAT-2017")
+
 # Importing data #
-url1 <- "https://raw.githubusercontent.com/cinnData/STAT/master/Data/"
-url2 <- "scapital.csv"
-url <- paste(url1, url2, sep="")
 scapital <- read.csv(url)
 head(scapital)
 
