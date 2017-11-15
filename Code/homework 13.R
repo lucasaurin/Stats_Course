@@ -1,8 +1,5 @@
 # STAT-13 - Homework ##
 
-# Loading package #
-library(e1071)
-
 # Auxiliar functions #
 mad <- function(x) (1/length(x))*sum(abs(x-mean(x)))
 M <- matrix(rnorm(10000*5), ncol=5)
