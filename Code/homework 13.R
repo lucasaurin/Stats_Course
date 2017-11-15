@@ -1,7 +1,9 @@
 # STAT-13 - Homework ##
 
-# Auxiliar functions #
+# Auxiliar function #
 mad <- function(x) (1/length(x))*sum(abs(x-mean(x)))
+
+# Simulation #
 M <- matrix(rnorm(10000*5), ncol=5)
 sigmahat <- sqrt(pi/2)*apply(M, 1, mad)
 s <- apply(M, 1, sd)
