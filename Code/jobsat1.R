@@ -1,6 +1,6 @@
 ## jobsat1 data set ##
 
-# Importing data #
+# Importing data (customize) #
 setwd("/Users/miguel/Dropbox/STAT-2017")
 jobsat <- read.csv("Data/jobsat1.csv")
 str(jobsat)
