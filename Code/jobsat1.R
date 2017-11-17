@@ -39,8 +39,6 @@ qqline(aov.model$residuals)
 # Kruskal-Wallis test #
 kruskal.test(formula=fm, data=jobsat)
 
-
-
 # Linear regression (2 groups) #
 reg.model1 <- lm(formula=fm, data=df1)
 summary(reg.model1)
