@@ -1,10 +1,8 @@
 ## ceosal2 data set ##
 
-# Importing data
-setwd("/Users/miguel/Dropbox/Current jobs/STAT-2016")
-df <- read.csv("Data/ceosal2.csv")
+# Importing data (customize) #
+df <- read.csv("ceosal2.csv")
 str(df)
-summary(df)
 
 # Histograms
 par(mfrow=c(1,2))
