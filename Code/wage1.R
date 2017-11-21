@@ -3,7 +3,6 @@
 # Importing data (customize) #
 df <- read.csv("wage1.csv")
 str(df)
-N <- nrow(df)
 
 # Unrestricted model #
 ur <- log(wage) ~ .
