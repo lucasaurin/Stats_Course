@@ -46,7 +46,7 @@
 
 - `glm`. Overall function for fitting *generalized linear models* (GLM) to data. An additional argument allows the user to specify the particular model desired, within the GLM collection. With the argument `family="binomial"`, it returns a *logistic regression model*, which can be used for classification purposes.
 
-- `predict`. In general, this function can be applied to a variety of predictive models, giving *predicted values*. In the simplest version, it uses two arguments: (a) `object`, to specify the name of the model, and (b) `newdata`, to specify the name of the data frame used for the predictions, which can be the same data frame on which the model was obtained, or a fresh one. In some applications, an additional argument is needeed, to specify the type of prediction desired. For instance, in a logistic regression model, the argument `type="response"` is used to obtain *predictive scores* in the 0--1 range.
+- `predict`. In general, this function can be applied to a variety of predictive models, giving *predicted values*. In the simplest version, it uses two arguments: (a) `object`, to specify the name of the model, and (b) `newdata`, to specify the name of the data frame used for the predictions, which can be the same data frame on which the model was obtained, or a fresh one. In some applications, an additional argument is needeed, to specify the type of prediction desired. For instance, in a logistic regression model, the argument `type='response'` is used to obtain *predictive scores* in the 0--1 range.
 
 #### Functions
 
