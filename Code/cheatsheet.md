@@ -38,7 +38,7 @@
 
 - `hist`. Histogram of a numeric variable. Arguments `main`, `xlab` and `ylab` specify the title and the labels for the X and Y axis, respectively.
 
-- `plot`. It can take one or two variables. The default is `type="p"`, which uses dots. The size and shape of the dots can be changed with the argument `pch`. `type="l"` returns a line plot.
+- `plot`. It can take one or two variables. The default is `type='p'`, which uses dots. The size and shape of the dots can be changed with the argument `pch`. `type='l'` returns a line plot.
 
 #### Regression equations
 
