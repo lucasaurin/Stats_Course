@@ -4,7 +4,7 @@
 x=runif(100)
 
 # Pack elements of the vector as a matrix #
-A = matrix(x, nr=10) # By default R creates matrix by Column, default is byrow=FALSE
+A = matrix(x, nr=10)
 
 # Transpose (filling by row) #
 matrix(A, nr=10, byrow=TRUE)
@@ -17,7 +17,7 @@ round(A,3)
 A[1:3,2:4]
 
 # Diagonal vector #
-diag(A) #Diagonal vector of the matrix A
+diag(A)
 
 # Determinant #
 det(A)
