@@ -6,8 +6,8 @@ str(df)
 summary(df)
 
 # Figure 4.1 (customize) #
-pdf("Figures/fig 4.1.pdf", width=3.25, height=3.5, pointsize=7)
-hist(df$duration, main="", xlab="Strike duration (days)")
+pdf('Figures/fig 4.1.pdf', width=3.25, height=3.5, pointsize=7)
+hist(df$duration, main='', xlab='Strike duration (days)')
 dev.off()
 
 # Mean and standard deviation #
