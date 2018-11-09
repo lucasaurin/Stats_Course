@@ -6,7 +6,7 @@ str(df)
 head(df)
 
 # Calculating returns #
-returns =- df$open[-1]/df$open[-length(df$open)] - 1
+returns = df$open[-1]/df$open[-length(df$open)] - 1
 
 # Sample stats #
 library(e1071)
