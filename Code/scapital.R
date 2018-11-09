@@ -1,24 +1,30 @@
 ## scapital data set ##
 
-# Setting working directory (customize)
-setwd("C:/Users/mcanela/Dropbox (Personal)/STAT-2017")
-
 # Importing data #
-scapital <- read.csv(scapital.csv)
-head(scapital)
+df = read.csv('https://raw.githubusercontent.com/mcanela-iese/Stats_Course/master/Data/scapital.csv')
+head(df)
 
 # Averaging items #
-scapital$screl <- apply(scapital[, 8:14], 1, mean)
+df$screl = apply(df[, 8:14], 1, mean)
 
 # Group statistics #
-N <- table(scapital$female)
-xbar <- tapply(scapital$screl, scapital$female, mean)
-s <- tapply(scapital$screl, scapital$female, sd)
+N = table(df$female)
+N
+xbar = tapply(df$screl, df$female, mean)
+xbar
+s = tapply(df$screl, df$female, sd)
+s
 
-# t critical values #
-t_alpha <- qt(0.975, df=N-1)
+# Confidence limits for the male group #
+t_alpha = qt(0.975, df=N[1]-1)
+t_alpha
+pm = t_alpha*s[1]/sqrt(N[1])
+CI_male = c(xbar[1] - pm, xbar[1] + pm)
+CI_male
 
-# Confidence limits #
-pm <- t_alpha*s/sqrt(N)
-CI_male <- c(xbar[1] - pm[1], xbar[1] + pm[1])
-CI_female <- c(xbar[2] - pm[2], xbar[2] + pm[2])
+# Confidence limits for the female group #
+t_alpha = qt(0.975, df=N[2]-1)
+t_alpha
+pm = t_alpha*s[2]/sqrt(N[2])
+CI_female = c(xbar[2] - pm, xbar[2] + pm)
+CI_female
