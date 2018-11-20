@@ -1,29 +1,30 @@
 ## market data set ##
 
-# Importing data (custopmize) #
-market <- read.csv("market.csv")
-N <- nrow(market)
+# Importing data #
+df = read.csv('https://raw.githubusercontent.com/mcanela-iese/Stats_Course/master/Data/market.csv')
+str(df)
+N = nrow(df)
 
 # Regression model #
-fm <- salary ~ market
-mod <- lm(formula=fm, data=market)
+fm = salary ~ market
+mod = lm(formula=fm, data=df)
 summary(mod)
 
 # Graphics (1) #
-plot(formula=fm, data=market, pch=".", xlab="Marketability", ylab="Salary")
+plot(formula=fm, data=df, pch='.', xlab='Marketability',
+  ylab='Salary')
 abline(coefficients(mod))
 
 # Graphics (2) #
-par(mfrow=c(1,1))
-res <- mod$residuals
-lab1 <- c("Standard normal quantiles"); lab2 <- c("Residuals")
-hist(res, main="", xlab=lab2)
-qqnorm(res, main="", xlab=lab1, ylab=lab2)
-qqline(res)
+par(mfrow=c(1,2))
+hist(mod$residuals, main="", xlab='Residuals')
+qqnorm(mod$residuals, main='', pch='.', xlab='Standard normal quantiles',
+  ylab='Residuals')
+qqline(mod$residuals)
 
-# Normality check #
+# Normality test #
 library(e1071)
-skewness(res)
-kurtosis(res)
-JB <- (N/6)*(skewness(res)^2 + (kurtosis(res)^2/4))
-P <- 1 - pchisq(JB, df=2)
+Sk = skewness(mod$residuals)
+Ku = kurtosis(mod$residuals)
+JB = (N/6)*(Sk^2 + (Ku^2/4))
+P = 1 - pchisq(JB, df=2)
