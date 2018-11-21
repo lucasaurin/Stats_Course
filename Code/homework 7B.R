@@ -1,7 +1,7 @@
 # Homework 7B ##
 
 # Auxiliar function #
-mad = function(x) (1/length(x))*sum(abs(x-mean(x)))
+mad = function(x) mean(abs(x - mean(x)))
 
 # Simulation #
 M = matrix(rnorm(50000), ncol=50)
