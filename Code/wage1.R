@@ -5,7 +5,7 @@ df = read.csv('https://raw.githubusercontent.com/mcanela-iese/Stats_Course/maste
 str(df)
 
 # Unrestricted model #
-ur = log(wage) ~ .
+ur = log(wage) ~ educ + tenure + exper
 ur.model = lm(formula=ur, data=df)
 summary(ur.model)
 
